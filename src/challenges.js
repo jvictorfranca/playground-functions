@@ -2,15 +2,15 @@
 function compareTrue(a, b) {
   // seu código aqui
   let resposta;
-  if (a === true && b === true) { resposta = true } 
-  else { resposta = false }
-  return resposta
+  if (a === true && b === true) { resposta = true };
+  else { resposta = false };
+  return resposta;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-return (base*height)/2
+return (base*height)/2;
 }
 
 /////////////////////////////////////// Desafio 3 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
