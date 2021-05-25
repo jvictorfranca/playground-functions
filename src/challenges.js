@@ -1,7 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a===true && b===true){return true} else{return false}
+  let resposta;
+  if (a === true && b === true) { resposta = true } 
+  else { resposta = false }
+  return resposta
 }
 
 // Desafio 2
@@ -37,8 +40,11 @@ return frase
 }  
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let palavra = ''
+  palavra = array[array.length-1] + ', ' + array[0]
+  return palavra
 }
 
 // Desafio 5
