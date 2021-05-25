@@ -31,7 +31,7 @@ function contaEspacos(string) {
 function splitSentence(string) {
   let frase = [];
   let palavra = '';
-  let string2 = ' ' + string + ' ';
+  let string2 = ` ${string} `;
   let espacos = contaEspacos(string2);
 
   for (let index = 0; index < espacos.length - 1; index += 1) {
@@ -48,7 +48,7 @@ function splitSentence(string) {
 function concatName(array) {
   // seu código aqui
   let palavra = '';
-  palavra = array[array.length - 1] + ', ' + array[0];
+  palavra = `${array[array.length - 1]}, ${array[0]}`;
   return palavra;
 }
 
