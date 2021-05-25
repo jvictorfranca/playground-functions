@@ -2,7 +2,7 @@
 function compareTrue(a, b) {
   // seu código aqui
   let resposta;
-  if (a === true && b === true) { resposta = true };
+  if (a === true && b === true) { resposta = true }
   else { resposta = false };
   return resposta;
 }
@@ -77,8 +77,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat1_mouse = mouse - cat1;
+  cat1_mouse = Math.abs(cat1_mouse)
+  let cat2_mouse = mouse - cat2;
+  cat2_mouse = Math.abs(cat2_mouse)
+  let answer;
+  if (cat1_mouse < cat2_mouse) {answer = 'cat1'}
+  else if (cat2_mouse < cat1_mouse) {answer = 'cat2'}
+  else {answer='os gatos trombam e o rato foge'}
+  return answer
 }
 
 // Desafio 8
