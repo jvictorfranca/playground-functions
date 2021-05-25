@@ -3,35 +3,35 @@ function compareTrue(a, b) {
   // seu código aqui
   let resposta;
   if (a === true && b === true) { resposta = true }
-  else { resposta = false };
+  else { resposta = false } ;
   return resposta;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-return (base*height)/2;
+  return (base * height) / 2;
 }
 
-/////////////////////////////////////// Desafio 3 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//conta espaços
+//  Desafio 3 ----------------------------------------------------------------------------------------------------------------
+//  conta espaços
 function contaEspacos(string){
-  let espacos=[]
+  let espacos = []
   for(let index=0; index<string.length; index+=1){
     if(string[index]===' '){espacos.push(index)} 
   }
 return espacos
 }
-//resolve desafio
+//  Resolve desafio
 function splitSentence(string) {
   let frase=[]
-  let palavra=''
+  let palavra = ''
   string = ' ' + string + ' '
   let espacos = contaEspacos(string)
   
-  for(index=0; index<espacos.length-1; index+=1){
+  for(index = 0; index<espacos.length-1; index += 1){
     palavra = ''
-    for(let index2= espacos[index]+1; index2<espacos[index+1]; index2+=1){
+    for(let index2 = espacos[index]+1; index2 < espacos[index+1]; index2 += 1){
       palavra += string[index2]
     }
     frase.push(palavra)
@@ -54,8 +54,8 @@ function footballPoints(wins, ties) {
   return result
 }
 
-// Desafio 6/////////////////////////////////////////////////////////////////////////////////////////
-//Acha o maior numero
+// Desafio 6----------------------------------------------------------------------
+//  Acha o maior numero
 function biggest(array) {
   let maior=array[0]
   for (let index = 1 ; index<array.length ; index+=1){
@@ -63,7 +63,7 @@ function biggest(array) {
   }
   return maior
 }
-//resolve o desafio
+//  resolve o desafio
 function highestCount(array) {
   // seu código aqui
   let maior = biggest(array)
@@ -90,23 +90,23 @@ function catAndMouse(mouse, cat1, cat2) {
   return answer
 }
 
-// Desafio 8/////////////
+// Desafio 8 ------------------------------------------------------
 
-//função divide por 5
+//  Função divide por 5
 function div5(n){
   let resposta;
   if (n%5 === 0) {resposta = true}
   else {resposta = false}
-  return resposta
+  return resposta;
 }
 //função divide por 3
 function div3(n){
   let resposta;
   if (n%3 === 0) {resposta = true}
   else {resposta = false}
-  return resposta
+  return resposta;
 }
-//Resolve o desafio
+//  Resolve o desafio
 function fizzBuzz(array) {
   let d5;
   let d3;
@@ -118,15 +118,15 @@ function fizzBuzz(array) {
     if (d5 === true && d3 === true) {answer = 'fizzBuzz'}
     else if (d5 === true && d3 === false) {answer = 'buzz'}
     else if (d5 === false && d3 === true) {answer = 'fizz'}
-    else {answer = 'bug!'}
-    fizzBuzz.push(answer)
+    else {answer = 'bug!'};
+    fizzBuzz.push(answer);
   }
-  return fizzBuzz
+  return fizzBuzz;
 }
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
+  // Seu código aqui
   let codificador = {
     a:1,
     e:2,
@@ -139,7 +139,7 @@ function encode(string) {
   for (index = 0; index<string.length; index+=1){
     adicao=""
     for (key in codificador){
-      if (string[index]==key){adicao+=codificador[key]}
+      if (string[index] == key) {adicao+=codificador[key]}
     }
     if (adicao.length===1){codigo+=adicao}
     else {codigo+=string[index]}
@@ -147,7 +147,7 @@ function encode(string) {
   return codigo
 }
 function decode(string) {
-  // seu código aqui
+  // Seu código aqui
   let decodificador = {
     1:"a",
     2:"e",
