@@ -63,8 +63,10 @@ function footballPoints(wins, ties) {
 //  Acha o maior numero
 function biggest(array) {
   let maior = array[0];
-  for (let index = 1; index < array.length; index += 1 ) {
-    if (maior < array[index]) { maior = array[index] }
+  for (let index = 1; index < array.length; index += 1) {
+    if (maior < array[index]) {
+      maior = array[index];
+    }
   }
   return maior;
 }
@@ -75,8 +77,8 @@ function highestCount(array) {
   let sum = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maior) {
-      sum += 1
-    } 
+      sum += 1;
+    }
   }
   return sum;
 }
@@ -89,9 +91,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Mouse = mouse - cat2;
   cat2Mouse = Math.abs(cat2Mouse);
   let answer;
-  if (cat1Mouse < cat2Mouse) { answer = 'cat1' }
-  else if (cat2Mouse < cat1Mouse) { answer = 'cat2' }
-  else { answer = 'os gatos trombam e o rato foge' }
+  if (cat1Mouse < cat2Mouse) {
+    answer = 'cat1';
+  } else if (cat2Mouse < cat1Mouse) {
+    answer = 'cat2';
+  } else {
+    answer = 'os gatos trombam e o rato foge';
+  }
   return answer;
 }
 
@@ -100,15 +106,21 @@ function catAndMouse(mouse, cat1, cat2) {
 //  Função divide por 5
 function div5(n) {
   let resposta;
-  if (n%5 === 0) { resposta = true }
-  else { resposta = false }
+  if (n % 5 === 0) {
+    resposta = true;
+  } else {
+    resposta = false;
+  }
   return resposta;
 }
-//função divide por 3
+// Função divide por 3
 function div3(n) {
   let resposta;
-  if (n%3 === 0) { resposta = true }
-  else { resposta = false }
+  if (n % 3 === 0) {
+    resposta = true;
+  } else {
+    resposta = false;
+  }
   return resposta;
 }
 //  Resolve o desafio
@@ -116,14 +128,19 @@ function fizzBuzz(array) {
   let d5;
   let d3;
   let answer;
-  let fizzBuzzArray=[];
+  let fizzBuzzArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    d5 = div5(array[index])
-    d3 = div3(array[index])
-    if (d5 === true && d3 === true) { answer = 'fizzBuzz' }
-    else if (d5 === true && d3 === false) { answer = 'buzz' }
-    else if (d5 === false && d3 === true) { answer = 'fizz' }
-    else { answer = 'bug!' };
+    d5 = div5(array[index]);
+    d3 = div3(array[index]);
+    if (d5 === true && d3 === true) {
+      answer = 'fizzBuzz';
+    } else if (d5 === true && d3 === false) {
+      answer = 'buzz';
+    } else if (d5 === false && d3 === true) {
+      answer = 'fizz';
+    } else {
+      answer = 'bug!';
+    }
     fizzBuzzArray.push(answer);
   }
   return fizzBuzzArray;
@@ -133,37 +150,42 @@ function fizzBuzz(array) {
 function encode(string) {
   // Seu código aqui
   let codificador = {
-    a:1,
-    e:2,
-    i:3,
-    o:4,
-    u:5,
-  }
-  let codigo = "";
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let codigo = '';
   let adicao;
   for (let index = 0; index < string.length; index += 1) {
-    adicao="";
-    for (key in codificador) {
-      if (string[index] == key) { adicao+=codificador[key] }
+    adicao = '';
+    for (let key in codificador) {
+      if (string[index] === key) {
+        adicao += codificador[key];
+      }
     }
-    if (adicao.length === 1) { codigo += adicao }
-    else { codigo += string[index] }
+    if (adicao.length === 1) {
+      codigo += adicao;
+    } else {
+      codigo += string[index];
+    }
   }
   return codigo;
 }
 function decode(string) {
   // Seu código aqui
   let decodificador = {
-    1:"a",
-    2:"e",
-    3:"i",
-    4:"o",
-    5:"u",
-  }
-  let codigo = "";
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let codigo = '';
   let adicao;
-  for (let index = 0; index < string.length; index +=1 ) {
-    adicao="";
+  for (let index = 0; index < string.length; index += 1) {
+    adicao = '';
     for (let key in decodificador) {
       if (string[index] === key) {
         adicao += decodificador[key];
