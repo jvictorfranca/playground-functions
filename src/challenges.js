@@ -63,19 +63,19 @@ function footballPoints(wins, ties) {
 //  Acha o maior numero
 function biggest(array) {
   let maior = array[0];
-  for (let index = 1; index < array.length; index +=1 ) {
-    if (maior < array[index]) {maior = array[index]}
+  for (let index = 1; index < array.length; index += 1 ) {
+    if (maior < array[index]) { maior = array[index] }
   }
   return maior;
 }
 //  resolve o desafio
 function highestCount(array) {
   // seu código aqui
-  let maior = biggest(array)
-  let sum = 0
-  for (let index = 0; index < array.length; index+=1) {
+  let maior = biggest(array);
+  let sum = 0;
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === maior) {
-      sum +=1
+      sum += 1
     } 
   }
   return sum;
@@ -84,13 +84,13 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let cat1_mouse = mouse - cat1;
-  cat1_mouse = Math.abs(cat1_mouse);
-  let cat2_mouse = mouse - cat2;
-  cat2_mouse = Math.abs(cat2_mouse);
+  let cat1Mouse = mouse - cat1;
+  cat1Mouse = Math.abs(cat1Mouse);
+  let cat2Mouse = mouse - cat2;
+  cat2Mouse = Math.abs(cat2Mouse);
   let answer;
-  if (cat1_mouse < cat2_mouse) { answer = 'cat1' }
-  else if (cat2_mouse < cat1_mouse) { answer = 'cat2' }
+  if (cat1Mouse < cat2Mouse) { answer = 'cat1' }
+  else if (cat2Mouse < cat1Mouse) { answer = 'cat2' }
   else { answer = 'os gatos trombam e o rato foge' }
   return answer;
 }
@@ -116,17 +116,17 @@ function fizzBuzz(array) {
   let d5;
   let d3;
   let answer;
-  let fizzBuzz=[];
-  for (let index = 0; index < array.length; index+=1) {
+  let fizzBuzzArray=[];
+  for (let index = 0; index < array.length; index += 1) {
     d5 = div5(array[index])
     d3 = div3(array[index])
     if (d5 === true && d3 === true) { answer = 'fizzBuzz' }
     else if (d5 === true && d3 === false) { answer = 'buzz' }
     else if (d5 === false && d3 === true) { answer = 'fizz' }
     else { answer = 'bug!' };
-    fizzBuzz.push(answer);
+    fizzBuzzArray.push(answer);
   }
-  return fizzBuzz;
+  return fizzBuzzArray;
 }
 
 // Desafio 9
@@ -141,13 +141,13 @@ function encode(string) {
   }
   let codigo = "";
   let adicao;
-  for (index = 0; index < string.length; index+=1) {
+  for (let index = 0; index < string.length; index += 1) {
     adicao="";
     for (key in codificador) {
-      if (string[index] == key) {adicao+=codificador[key]}
+      if (string[index] == key) { adicao+=codificador[key] }
     }
-    if (adicao.length===1) {codigo+=adicao}
-    else {codigo+=string[index]}
+    if (adicao.length === 1) { codigo += adicao }
+    else { codigo += string[index] }
   }
   return codigo;
 }
@@ -160,18 +160,22 @@ function decode(string) {
     4:"o",
     5:"u",
   }
-  let codigo = ""
+  let codigo = "";
   let adicao;
-  for (index = 0; index < string.length; index+=1) {
+  for (let index = 0; index < string.length; index +=1 ) {
     adicao="";
-    for (key in decodificador) {
-      if (string[index]==key) {adicao += decodificador[key]}
+    for (let key in decodificador) {
+      if (string[index] === key) {
+        adicao += decodificador[key];
+      }
     }
-    if (adicao.length === 1) {codigo += adicao}
-    else {codigo+=string[index]}
+    if (adicao.length === 1) {
+      codigo += adicao;
+    } else {
+      codigo += string[index];
+    }
   }
   return codigo;
-  
 }
 
 module.exports = {
