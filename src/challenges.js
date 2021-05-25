@@ -90,9 +90,38 @@ function catAndMouse(mouse, cat1, cat2) {
   return answer
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Desafio 8/////////////
+
+//função divide por 5
+function div5(n){
+  let resposta;
+  if (n%5 === 0) {resposta = true}
+  else {resposta = false}
+  return resposta
+}
+//função divide por 3
+function div3(n){
+  let resposta;
+  if (n%3 === 0) {resposta = true}
+  else {resposta = false}
+  return resposta
+}
+//Resolve o desafio
+function fizzBuzz(array) {
+  let d5;
+  let d3;
+  let answer;
+  let fizzBuzz=[];
+  for (let index = 0; index<array.length; index+=1){
+    d5 = div5(array[index])
+    d3 = div3(array[index])
+    if (d5 === true && d3 === true) {answer = 'fizzBuzz'}
+    else if (d5 === true && d3 === false) {answer = 'buzz'}
+    else if (d5 === false && d3 === true) {answer = 'fizz'}
+    else {answer = 'bug!'}
+    fizzBuzz.push(answer)
+  }
+  return fizzBuzz
 }
 
 // Desafio 9
